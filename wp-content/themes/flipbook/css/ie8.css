@@ -1,0 +1,19 @@
+#entry_list .entry_item{
+
+display:none;
+opacity:1;
+
+}
+
+#entry_list .image_container{
+
+top:0px;
+
+}
+
+
+#entry_list .entry_item .shadow{
+
+display:none;
+
+}

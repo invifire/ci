@@ -1,0 +1,2 @@
+[15-May-2011 16:58:43] PHP Warning:  is_writable() [<a href='function.is-writable'>function.is-writable</a>]: open_basedir restriction in effect. File(/) is not within the allowed path(s): (/home/:/tmp) in /home/vunga/public_html/blog/wp-admin/includes/misc.php on line 133
+[15-May-2011 16:58:43] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vunga/public_html/blog/wp-admin/includes/misc.php:133) in /home/vunga/public_html/blog/wp-includes/pluggable.php on line 897

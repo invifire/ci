@@ -1,0 +1,496 @@
+/*
+Theme Name: Metro
+Theme URI: http://xamlcoder.com
+Description: A metro blog theme.
+Version: 1.0
+Author: Joe McBride
+Tags: variable width, widgets
+*/
+
+/* === RESET CSS === */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* === end RESET CSS === */
+
+html
+{
+	height: 100%;
+	overflow: auto;
+}
+
+body {
+  background: #fff;
+  font-family: segoe wp,segoe ui,verdana,arial,helvetica,sans-serif;
+	font-size: 14px;
+	color:#444;
+}
+
+a
+{
+	color: #0099ff;
+	text-decoration: none;
+	font-weight: 300;
+}
+
+a:hover
+{
+  color: #4fb9ff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: #0199ff;
+}
+
+p {
+	margin: 15px 0 15px 0;
+}
+
+pre {
+	margin: 1em 0px;	
+}
+
+.reldiv {position: relative;}
+.right {float:right;}
+.left {float:left;}
+.clear {clear:both;}
+
+.container { width: 950px; margin: 30px auto 0 auto; clear: both; position: relative;}
+
+.header {
+	display: block;
+	margin: 0 0 25px 0;
+}
+
+.header h1 {
+	font-size: 64px;
+	font-weight:100;
+}
+
+.header span {
+	font-size: 18px;
+	text-transform: lowercase;
+}
+.back
+{
+	background-image: url(content/b/back.png);
+	height: 48px;
+	width: 48px;
+	margin-right:20px;
+} 
+.posts {
+  width: 635px;
+}
+
+.post h1 {
+	font-size: 36px;
+	text-align: left;
+}
+
+.post {
+	text-align: left;
+}
+
+.nav {
+	display: block;
+	margin: 0 -10px 0 0;
+}
+
+.nav img {
+}
+
+.socialLink
+{
+	width:52px;
+	height:52px;
+	display:block;
+	float: left;
+	margin: 0 0 0 10px;
+}
+
+.socialLink span
+{
+	display: none;
+}
+
+.socialLink.email
+{
+	background:transparent url(content/mail_send.png) no-repeat;
+}
+
+
+.socialLink.twitter
+{
+	background:transparent url(content/twitter.png) no-repeat;
+}
+
+.socialLink.linkedin
+{
+	background:transparent url(content/linkedin.png) no-repeat;
+}
+
+.socialLink.facebook
+{
+	background:transparent url(content/facebook.png) no-repeat;
+}
+
+.socialLink.rss
+{
+	background:transparent url(content/rss.png) no-repeat;
+}
+
+.sidebar {
+	width: 280px;
+	border: #eee solid;
+	border-width: 0 0 0 1px;
+	padding: 0 0 0 15px;
+}
+
+.sidebaritem {
+	margin: 0 0 25px 0;
+	text-align: justify;
+}
+
+.sidebaritem h2 {
+	font-size: 30px;
+	font-family: segoe wp,segoe ui,verdana,arial,helvetica,sans-serif;
+	margin: 0 0 20px 0;
+	text-transform: lowercase;
+	font-weight: 300;
+}
+
+.sidebaritem .tags a {
+	margin: 0 0 0 0;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.twitter-followers
+{
+	float: left;
+	width: 70px;
+	margin: 0 0 0 5px;
+}
+
+.twitter-sidebar
+{
+}
+
+.twitter-sidebar .twitter-small
+{
+	margin: 7px 0 0 0;
+}
+
+.twitter-followers a
+{
+	color: #444;
+	font-weight: normal;
+}
+
+.twitter-followers .count
+{
+	font-size: 21px;
+	float: left;
+	font-family: Arial;
+}
+
+.twitter-followers .desc
+{
+	font-size: 12px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	float: left;
+	color:#888;
+}
+
+.postinfo {
+	font-size: 14px;
+	font-weight: 300;
+	color: #aaaaaa;
+	text-transform: uppercase;
+	margin: 0 0 15px 0;
+}
+
+.postdate {
+	font-weight: 300;
+}
+
+.postdata {
+  text-align: justify;
+}
+
+.posttags {
+}
+
+.softwarenotice {
+	font-size: 10px;
+}
+
+.footer {
+	padding: 50px 0 0 0;
+}
+
+.footer .section {
+	margin: 0 50px 0 0;
+}
+
+.footer .section h2 {
+	text-transform: lowercase;
+	font-size: 30px;
+	margin: 0 0 15px 0;
+	font-weight: 300;
+}
+
+.footer .section a {
+	text-transform: uppercase;
+	margin: 0 100px 0 0;
+}
+
+#twitter_div ul {
+	display: block;
+	margin: 0;
+	padding:0;
+}
+
+#twitter_div li {
+	margin: 0 0 10px 0;
+	padding:0;
+}
+
+#twitter_div li span {
+	display: block;
+}
+
+#twitter_div li span a {
+	color: #0099ff;
+}
+
+#twitter_div li a {
+	color: #aaaaaa;
+}
+
+.mentions
+{
+	display: block;
+	margin: 15px 0 75px 0;
+}
+
+.twitter-small
+{
+	display: block;
+	background-image: url(content/twitter-small.png);
+	height: 28px;
+	width: 28px;
+}
+
+.twitter-share-button-2
+{
+	display: block;
+	background-image: url(content/twitter-mentions.png);
+	height: 21px;
+	width: 100px;
+	color: #ffffff;
+	margin: 2px 12px 0 5px;
+}
+
+.twitter-share-button-2 span
+{
+	margin: 0 0 0 15px;
+}
+
+.tags ul
+{
+  text-align: left;
+}
+
+.tags li
+{
+  display: inline;
+  margin: 0 7px 0 0;
+}
+
+.screen-reader-text {
+     position: absolute;
+     left: -1000em;
+}
+
+/*
+	Page Tabs
+*/
+#tabs ul
+{
+	list-style-type: none;
+	margin: 5px 21em 5px 0;
+	padding: 0;
+	text-align: right;
+}
+
+#tabs ul li
+{
+	display: inline;
+	margin: 0;
+	padding: 5px 30px 5px 30px;
+}
+
+#tabs ul li a
+{
+	display: inline;
+    text-transform: lowercase;
+    font-size: 13px;
+    color: #aaa;
+    text-align:center;
+    outline: none;
+    text-decoration: none;
+}
+
+#tabs ul li a:hover
+{
+	color: #eee;
+}
+
+#tabs ul li.current_page_item
+{
+}
+
+#wp-calendar {
+	border: 1px solid #ddd;
+	empty-cells: show;
+	font-size: 14px;
+	margin: 0;
+	width: 90%;
+}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+}
+
+#wp-calendar a {
+	display: block;
+	text-decoration: none;
+}
+
+#wp-calendar a:hover {
+	background: #e0e6e0;
+	color: #333;
+}
+
+#wp-calendar caption {
+	color: #999;
+	font-size: 16px;
+	text-align: left;
+}
+
+#wp-calendar td {
+	color: #ccc;
+	font: normal 12px 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	letter-spacing: normal;
+	padding: 2px 0;
+	text-align: center;
+}
+
+#wp-calendar td.pad:hover {
+	background: #fff;
+}
+
+#wp-calendar td:hover, #wp-calendar #today {
+	background: #eee;
+	color: #bbb;
+}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+/* Captions & aligment */
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+/* End captions & aligment */
